@@ -153,6 +153,11 @@ set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 
+"undotree conf
+set undolevels=5000
+nnoremap <F4> :UndotreeToggle<cr>
+set undodir=~/.vim/undo/
+set undofile
 filetype off
 syntax on
 filetype plugin indent on
