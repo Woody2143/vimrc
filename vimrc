@@ -49,7 +49,7 @@ set relativenumber
 "switch back and forth depending on INSERT mode
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
-"switch back and forth if window losses 
+"switch back and forth if window losses
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 
@@ -144,6 +144,14 @@ if exists('&selection')
 endif
 
 execute pathogen#infect()
+
+set encoding=utf-8
+set laststatus=2
+set t_Co=256
+
+"airline conf
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
 
 filetype off
 syntax on
