@@ -158,6 +158,12 @@ set undolevels=5000
 nnoremap <F4> :UndotreeToggle<cr>
 set undodir=~/.vim/undo/
 set undofile
+
+"gitgutter conf
+let g:gitgutter_highlight_lines = 1
+nnoremap <F5> :GitGutterToggle<cr>
+nnoremap <F6> :GitGutterLineHighlightsToggle<cr>
+
 filetype off
 syntax on
 filetype plugin indent on
