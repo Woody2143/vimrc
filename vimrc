@@ -165,6 +165,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "solorized colors
+"let g:solarized_termcolors=256
 "syntax enable
 "colorscheme solarized
 set bg=dark
