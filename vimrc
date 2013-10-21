@@ -2,6 +2,7 @@ set nocompatible
 
 set cursorline
 set cursorcolumn
+set scrollbind
 
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
