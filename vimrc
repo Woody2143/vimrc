@@ -1,8 +1,5 @@
 set nocompatible
 
-set undodir=~/.vim/undo/
-set undofile
-
 set cursorline
 set cursorcolumn
 
@@ -136,7 +133,6 @@ set exrc
 set nocompatible
 set noshowcmd
 set ruler
-set undolevels=1000
 if exists('&selection')
   set selection=exclusive
 endif
