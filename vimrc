@@ -48,8 +48,8 @@ set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 "switch back and forth if window losses
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
+au FocusLost * :set number
+au FocusGained * :set relativenumber
 
 " personal keybindings
 " imap {  {}<ESC>i
