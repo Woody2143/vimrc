@@ -24,8 +24,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set bg=dark
-
 " autoindent
 set autoindent
 set smartindent
@@ -168,6 +166,11 @@ nnoremap <F6> :GitGutterLineHighlightsToggle<cr>
 nnoremap <F3> :NERDTreeToggle<cr>
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+"solorized colors
+"syntax enable
+"colorscheme solarized
+
 filetype off
 syntax on
 filetype plugin indent on
