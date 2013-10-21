@@ -7,7 +7,7 @@ set cursorline
 set cursorcolumn
 
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 
 " :nnoremap <Leader>c :set cursorline! cursorcolumn!
 
