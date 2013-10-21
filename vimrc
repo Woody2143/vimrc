@@ -166,6 +166,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "solorized colors
 "syntax enable
 "colorscheme solarized
+set bg=dark
 
 filetype off
 syntax on
