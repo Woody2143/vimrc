@@ -1,9 +1,11 @@
 set nocompatible
+set noexrc
+set fenc=utf-8
+
+set lazyredraw " do not redraw while running macros
 
 set cursorline
 set cursorcolumn
-"set scrollbind "oops don't want this all the time
-
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 
@@ -11,7 +13,7 @@ hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=w
 
 " Look for trailing spaces...
 set list
-set listchars=trail:.
+set listchars=tab:>-,trail:.
 
 " use visual bell instead of beeping
 set vb
@@ -56,8 +58,11 @@ au FocusGained * :set relativenumber
 " imap <  <><ESC>i
 
 "like sublime multicurser -> enable . in visual mode
-vnoremap . :normal .<cr>
+vnoremap . :normal .<s-cr>
 
+"Trying out a new ESCAPE
+":imap jk <Esc>
+inoremap <CR> <ESC>
 
 " check perl code with :make
 "autocmd FileType perl set makeprg=perl\ -c\ %\ $*
@@ -102,18 +107,6 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<CR>
 
-" Toggle line numbers
-"function! NumberDisplayToggle()
-"  if(&relativenumber == 1)
-"    let g:oldNumber = "relativenumber"
-"    set relativenumber!
-"  else
-"    let g:oldNumber = "number"
-"    set number!
-"  endif
-"endfunc
-"map <F12> :call NumberDisplayToggle()<CR>
-"imap <F12> :call NumberDisplayToggle()<CR>
 map <F12> :set number!<CR>
 imap <F12> <c-o>:set number!<CR>
 
