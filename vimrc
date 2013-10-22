@@ -1,6 +1,17 @@
 set nocompatible
+execute pathogen#infect()
+call pathogen#helptags()
+
 set noexrc
 set fenc=utf-8
+set encoding=utf-8
+set laststatus=2
+set t_Co=256
+set bg=dark
+filetype off
+syntax on
+filetype plugin indent on
+match Todo /\s\+$/
 
 set lazyredraw " do not redraw while running macros
 
@@ -131,11 +142,6 @@ if exists('&selection')
   set selection=exclusive
 endif
 
-execute pathogen#infect()
-
-set encoding=utf-8
-set laststatus=2
-set t_Co=256
 
 "airline conf
 let g:airline#extensions#tabline#enabled = 1
@@ -161,11 +167,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "let g:solarized_termcolors=256
 "syntax enable
 "colorscheme solarized
-set bg=dark
 
-filetype off
-syntax on
-filetype plugin indent on
 
-match Todo /\s\+$/
 
