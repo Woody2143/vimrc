@@ -72,8 +72,9 @@ au FocusGained * :set relativenumber
 vnoremap . :normal .<s-cr>
 
 "Trying out a new ESCAPE
-":imap jk <Esc>
-inoremap <CR> <ESC>
+:imap jk <Esc>
+"inoremap <CR> <ESC>
+"inoremap <s-cr> <cr>
 
 " check perl code with :make
 "autocmd FileType perl set makeprg=perl\ -c\ %\ $*
