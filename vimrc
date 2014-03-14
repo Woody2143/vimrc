@@ -1,9 +1,22 @@
 set nocompatible
+execute pathogen#infect()
+call pathogen#helptags()
+
+set noexrc
+set fenc=utf-8
+set encoding=utf-8
+set laststatus=2
+set t_Co=256
+set bg=dark
+filetype off
+syntax on
+filetype plugin indent on
+match Todo /\s\+$/
+
+set lazyredraw " do not redraw while running macros
 
 set cursorline
 set cursorcolumn
-"set scrollbind "oops don't want this all the time
-
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 
@@ -11,7 +24,7 @@ hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=w
 
 " Look for trailing spaces...
 set list
-set listchars=trail:.
+set listchars=tab:>-,trail:.
 
 " use visual bell instead of beeping
 set vb
@@ -56,8 +69,12 @@ au FocusGained * :set relativenumber
 " imap <  <><ESC>i
 
 "like sublime multicurser -> enable . in visual mode
-vnoremap . :normal .<cr>
+vnoremap . :normal .<s-cr>
 
+"Trying out a new ESCAPE
+:imap jk <Esc>
+"inoremap <CR> <ESC>
+"inoremap <s-cr> <cr>
 
 " check perl code with :make
 "autocmd FileType perl set makeprg=perl\ -c\ %\ $*
@@ -102,18 +119,6 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<CR>
 
-" Toggle line numbers
-"function! NumberDisplayToggle()
-"  if(&relativenumber == 1)
-"    let g:oldNumber = "relativenumber"
-"    set relativenumber!
-"  else
-"    let g:oldNumber = "number"
-"    set number!
-"  endif
-"endfunc
-"map <F12> :call NumberDisplayToggle()<CR>
-"imap <F12> :call NumberDisplayToggle()<CR>
 map <F12> :set number!<CR>
 imap <F12> <c-o>:set number!<CR>
 
@@ -138,11 +143,6 @@ if exists('&selection')
   set selection=exclusive
 endif
 
-execute pathogen#infect()
-
-set encoding=utf-8
-set laststatus=2
-set t_Co=256
 
 "airline conf
 let g:airline#extensions#tabline#enabled = 1
@@ -168,11 +168,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "let g:solarized_termcolors=256
 "syntax enable
 "colorscheme solarized
-set bg=dark
 
-filetype off
-syntax on
-filetype plugin indent on
 
-match Todo /\s\+$/
 
