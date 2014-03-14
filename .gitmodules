@@ -28,6 +28,3 @@
 [submodule "bundle/vim-colors-solarized"]
     path = bundle/vim-colors-solarized
     url = git@voice-ats.adc1.level3.com:vim-colors-solarized
-[submodule "vim-perl"]
-	path = vim-perl
-	url = git@voice-ats.adc1.level3.com:vim-perl
