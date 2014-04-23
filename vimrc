@@ -164,6 +164,10 @@ nnoremap <F3> :NERDTreeToggle<cr>
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"gitgutter conf
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterRevertHunk
+
 "solorized colors
 "let g:solarized_termcolors=256
 "syntax enable
