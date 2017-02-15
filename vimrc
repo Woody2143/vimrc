@@ -6,6 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/gundo'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'mbbill/undotree'
 Bundle 'bling/vim-airline'
@@ -15,6 +16,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'dbakker/vim-lint'
 Bundle 'vim-perl/vim-perl'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
 
 
 set noexrc
