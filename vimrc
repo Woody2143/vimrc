@@ -1,6 +1,21 @@
 set nocompatible
-execute pathogen#infect()
-call pathogen#helptags()
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'vim-scripts/gundo'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'mbbill/undotree'
+Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'dbakker/vim-lint'
+Bundle 'vim-perl/vim-perl'
+Bundle 'Valloric/YouCompleteMe'
+
 
 set noexrc
 set fenc=utf-8
@@ -8,7 +23,6 @@ set encoding=utf-8
 set laststatus=2
 set t_Co=256
 set bg=dark
-filetype off
 syntax on
 filetype plugin indent on
 match Todo /\s\+$/
