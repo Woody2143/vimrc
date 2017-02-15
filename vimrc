@@ -154,19 +154,19 @@ nnoremap <F4> :UndotreeToggle<cr>
 set undodir=~/.vim/undo/
 set undofile
 
-"gitgutter conf
-let g:gitgutter_highlight_lines = 1
-nnoremap <F5> :GitGutterToggle<cr>
-nnoremap <F6> :GitGutterLineHighlightsToggle<cr>
-
 "NERDTree conf
 nnoremap <F3> :NERDTreeToggle<cr>
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "gitgutter conf
+let g:gitgutter_highlight_lines = 1
+nnoremap <F5> :GitGutterToggle<cr>
+nnoremap <F6> :GitGutterLineHighlightsToggle<cr>
 nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hu <Plug>GitGutterRevertHunk
+nmap <Leader>]h <Plug>GitGutterNextHunk
+nmap <Leader>[h <Plug>GitGutterPrevHunk
 
 "solorized colors
 "let g:solarized_termcolors=256
