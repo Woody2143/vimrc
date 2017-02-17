@@ -15,9 +15,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'dbakker/vim-lint'
 Bundle 'vim-perl/vim-perl'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'ternjs/tern_for_vim'
+Bundle 'elzr/vim-json'
+Bundle 'Valloric/YouCompleteMe'
 
 
 set noexrc
@@ -28,6 +30,8 @@ set t_Co=256
 set bg=dark
 syntax on
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 match Todo /\s\+$/
 
 set lazyredraw " do not redraw while running macros
@@ -185,7 +189,8 @@ nmap <Leader>hu <Plug>GitGutterRevertHunk
 nmap <Leader>]h <Plug>GitGutterNextHunk
 nmap <Leader>[h <Plug>GitGutterPrevHunk
 
-"solorized colors
+nnoremap <F2> :buffers<CR>:buffer<Space>
+
 "let g:solarized_termcolors=256
 "syntax enable
 "colorscheme solarized
