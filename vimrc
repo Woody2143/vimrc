@@ -6,21 +6,26 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/gundo'
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
-Bundle 'mbbill/undotree'
 Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'dbakker/vim-lint'
 Bundle 'vim-perl/vim-perl'
 Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'ternjs/tern_for_vim'
+Bundle 'leafgarland/typescript-vim'
 Bundle 'elzr/vim-json'
+Bundle 'jiangmiao/auto-pairs'
 Bundle 'Valloric/YouCompleteMe'
-
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mbbill/undotree'
 
 set noexrc
 set fenc=utf-8
@@ -41,7 +46,7 @@ set cursorcolumn
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 
-" :nnoremap <Leader>c :set cursorline! cursorcolumn!
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Look for trailing spaces...
 set list
@@ -88,6 +93,8 @@ au FocusGained * :set relativenumber
 " imap (  ()<ESC>i
 " imap [  []<ESC>i
 " imap <  <><ESC>i
+" imap desc  describe('', function(){});<ESC>16hi
+" imap befo  beforeEach(function(){});<ESC>2hi
 
 "like sublime multicurser -> enable . in visual mode
 vnoremap . :normal .<s-cr>
