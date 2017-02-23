@@ -88,14 +88,6 @@ autocmd InsertLeave * :set relativenumber
 au FocusLost * :set number
 au FocusGained * :set relativenumber
 
-" personal keybindings
-" imap {  {}<ESC>i
-" imap (  ()<ESC>i
-" imap [  []<ESC>i
-" imap <  <><ESC>i
-" imap desc  describe('', function(){});<ESC>16hi
-" imap befo  beforeEach(function(){});<ESC>2hi
-
 "like sublime multicurser -> enable . in visual mode
 vnoremap . :normal .<s-cr>
 

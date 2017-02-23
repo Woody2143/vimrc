@@ -6,7 +6,7 @@ Upon cloneing the directory you must run:
 
 2. mkdir bundle
 
-3. git clone https://github.com/gmarik/Vundle.vim.git bundle/Vundle.vim
+3. git clone https://github.com/gmarik/Vundle.vim.git bundle/vundle
 
 4. open vim
 
