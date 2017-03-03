@@ -4,29 +4,29 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+"Bundle 'honza/vim-snippets'
+"Bundle 'altercation/vim-colors-solarized'
+"Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mbbill/undotree'
 Bundle 'vim-scripts/gundo'
+Bundle 'vimoutliner/vimoutliner'
+Bundle 'elzr/vim-json'
+Bundle 'dbakker/vim-lint'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
+Bundle 'ternjs/tern_for_vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'vim-perl/vim-perl'
+Bundle 'godlygeek/tabular'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'dbakker/vim-lint'
-Bundle 'vim-perl/vim-perl'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'ternjs/tern_for_vim'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'elzr/vim-json'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'SirVer/ultisnips'
-"Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'mbbill/undotree'
-Bundle 'vimoutliner/vimoutliner'
+Bundle 'Valloric/YouCompleteMe'
 
 set noexrc
 set fenc=utf-8
@@ -47,11 +47,13 @@ set cursorcolumn
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
 
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " Look for trailing spaces...
 set list
-set listchars=tab:>-,trail:.
+"set listchars=tab:>-,trail:.
+set lcs=tab:⇒·,trail:␣,nbsp:~"
+
 
 " use visual bell instead of beeping
 set vb
@@ -90,10 +92,10 @@ au FocusLost * :set number
 au FocusGained * :set relativenumber
 
 "like sublime multicurser -> enable . in visual mode
-vnoremap . :normal .<s-cr>
+"vnoremap . :normal .<s-cr>
 
 "Trying out a new ESCAPE
-:imap jk <Esc>
+imap jk <Esc>
 "inoremap <CR> <ESC>
 "inoremap <s-cr> <cr>
 
@@ -117,14 +119,14 @@ endfun
 " autocmd Filetype perl autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd FileType c,cpp,java,php,ruby,python,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-"Disable TAB trigger for YCM
-let g:ycm_key_list_select_completion=["<tab>"]
-let g:ycm_key_list_previous_completion=["<s-tab>"]
+"Set TAB trigger for YCM
+let g:ycm_key_list_select_completion=['<tab>']
+let g:ycm_key_list_previous_completion=['<s-tab>']
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger='<c-l>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -158,8 +160,8 @@ map <F12> :set number!<CR>
 imap <F12> <c-o>:set number!<CR>
 
 " comment/uncomment blocks of code (in vmode)
-vmap _c :s/^/#/gi<Enter>
-vmap _C :s/^#//gi<Enter>
+"vmap _c :s/^/#/gi<Enter>
+"vmap _C :s/^#//gi<Enter>
 
 " my perl includes pod
 let perl_include_pod = 1
