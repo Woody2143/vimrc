@@ -26,6 +26,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'mbbill/undotree'
+Bundle 'vimoutliner/vimoutliner'
 
 set noexrc
 set fenc=utf-8
