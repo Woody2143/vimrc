@@ -21,7 +21,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'MarcWeber/vim-addon-local-vimrc'
 Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
+"Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -116,14 +116,28 @@ endfun
 " autocmd Filetype perl autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd FileType c,cpp,java,php,ruby,python,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
+"Disable TAB trigger for YCM
+let g:ycm_key_list_select_completion=["<tab>"]
+let g:ycm_key_list_previous_completion=["<s-tab>"]
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+"Set snippets directory
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 " make tab in v mode ident code
-vmap <tab> >gv
-vmap <s-tab> <gv
+"vmap <tab> >gv
+"vmap <s-tab> <gv
 
 " make tab in normal mode ident code
-nmap <tab> I<tab><esc>
-nmap <s-tab> ^i<bs><esc>
+"nmap <tab> I<tab><esc>
+"nmap <s-tab> ^i<bs><esc>
 
 " paste mode - this will avoid unexpected effects when you
 " cut or copy some text from one window and paste it in Vim.
